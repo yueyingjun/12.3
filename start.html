@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>开机导航</title>
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<link rel="stylesheet" type="text/css" href="css/lib.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.0.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+	    <script src="js/jquery-3.1.0.js"></script>
+	    <script src="js/swiper.min.js"></script>
+	    <script src="js/animation.js"></script>
+	    <script src='js/lib.js'></script>
+	</head>
+	<script>
+	$(document).ready(function () {
+	resize(750);	
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    swiperAnimateCache(swiper); //隐藏动画元素 
+    swiperAnimate(swiper); //初始化完成开始动画
+  }, 
+  onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  },
+  onReachEnd: function(swiper){
+     setTimeout(function(){
+     	location.href='index.html';
+     },2000)
+    }
+  })   
+    });
+    
+	</script>
+	<style type="text/css">
+		.swiper-container{
+			width: 100%;
+			height: 100%;
+		}
+		.swiper-wrapper{
+			height: 100%;
+			width: 100%;
+		}
+		.swiper-slide{
+			background:#207CC1;
+		}
+		.swiper-wrapper .swiper-slide:nth-child(1){
+			
+		}
+		.swiper-slide{
+			font-size: 0.16rem;
+			position:relative
+		}
+		.swiper-left{
+			width: 3.38rem;
+			left:0.91rem;
+			position: absolute;
+			top: 2.39rem;
+		}
+		.swiper-right{
+			position: absolute;
+			right:0.56rem;
+			top:2.17rem;
+		}
+		.swiper-right img{
+			width: 3.95rem;
+			
+		}
+		.swiper-left img{
+			width: 3.38rem;
+		}
+		.swiper-bottom h1{
+			font-size:0.58rem;
+		}
+		.swiper-bottom{
+			width: 100%;
+			height: 3.76rem;
+			background: white;
+			position: absolute;
+			bottom: 0;
+			box-sizing: border-box;
+			padding-left: 0.5rem;
+		}
+		.swiper-bottom p{
+			font-size:0.34rem;
+		}
+		.swiper-bottom span{
+			color:#3A65AF;
+		}
+	</style>
+	<body>
+		 <div class="swiper-container">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<div class="swiper-left ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+            		<img src="img/yd11.png"/>
+            	</div>
+            	<div class="swiper-right ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+            		<img src="img/yd12.png"/>
+            	</div>
+            	<div class="swiper-bottom">
+            		<h1 class='ani' swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="0">精彩话题</h1>
+            		<p class='ani' swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0">每日精彩话题，发现更多<span>有趣</span>内容</p>
+            	</div>
+            </div>
+            <div class="swiper-slide">
+            	<div class="swiper-left ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+            		<img src="img/yd22_06.png"/>
+            	</div>
+            	<div class="swiper-right ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+            		<img src="img/yd21_03.png"/>
+            	</div>
+            	<div class="swiper-bottom">
+            		<h1 class='ani' swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="0">首页推荐</h1>
+            		<p class='ani' swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0">每日热门资讯，发现更多<span>有趣</span>内容</p>
+            	</div>
+            </div>
+            <div class="swiper-slide">
+            	<div class="swiper-left ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+            		<img src="img/yd31_03.png"/>
+            	</div>
+            	<div class="swiper-right ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+            		<img src="img/yd32_03.png"/>
+            	</div>
+            	<div class="swiper-bottom">
+            		<h1 class='ani' swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="0">热门视频</h1>
+            		<p class='ani' swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0">每日热门视频，发现更多<span>有趣</span>内容</p>
+            	</div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+	</body>
+</html>
