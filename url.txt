@@ -1,0 +1,5 @@
+https://120805087.github.io/newapp/index.html
+
+https://120805087.github.io/newapp/list.html
+
+https://120805087.github.io/newapp/show.html
