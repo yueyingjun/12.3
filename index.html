@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>列表页</title>
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		 <link rel="stylesheet" type="text/css" href="css/font.css"/>
+		 <script src="js/jquery-3.1.0.js"></script>
+		 <script src='js/lib.js'></script>
+	</head>
+	<script>
+		$(function(){
+			resize(750);
+		})
+	</script>
+	<style>
+	    body{
+	    	padding: 0;
+	    	margin: 0;
+	    	font-family: "微软雅黑";
+	    }
+		header{
+			width: 100%;
+			height: 0.86rem;
+			background: #C93D3C;	
+		}
+		header nav{
+			font-size: 0.36rem;
+			float: left;
+			padding-left: 20px;
+			padding-right: 20px;
+			line-height: 0.86rem;
+			color:#F2C2B4;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.search{
+			width: 100%;
+			height: 1.06rem;
+			background:#F4F4F6;
+			overflow: hidden;
+			
+		}
+		
+		.search-input{
+			width:6.84rem;
+			height: 0.7rem;
+			border:0.01rem solid #EAEAEA;
+			box-sizing: border-box;
+			margin: 0 auto;
+			background: white;
+			border-radius: 0.1rem;
+			margin-top: 0.19rem;
+			padding-left: 0.2rem;
+		}
+		.sear{
+			display: block;float: left;
+			height: 100%;
+			width: 10%;
+			font-size: 0.34rem;
+			line-height: 0.7rem;
+			color:#ccc;
+		}
+		.search-input input{
+			border-radius: 0.1rem;
+			width: 90%;
+			height: 100%;
+			border: 0;
+			padding: 0;
+			margin: 0;
+			display: block;
+			float: left;
+			outline: none;
+			font-size: 0.3rem;
+		}
+		.con{
+			width: 100%;
+			
+		}
+		.con ul{
+			width: 100%;
+			height: 100%;
+		}
+		.con-box{
+			width: 100%;
+			border-bottom: 0.02rem solid #F7F7F7;
+			overflow: hidden;
+		}
+		.con li{
+			overflow: hidden;
+			box-sizing:border-box;
+			padding-left: 0.34rem;
+			padding-right:0.34rem;
+			padding-top: 0.34rem;
+			
+		}
+		.con-title{
+			font-size: 0.34rem;
+			width: 4.12rem;
+			float: left;
+			margin-right: 0.1rem;	
+		}
+		.con-title a{
+			text-decoration: none;
+			color: #333738;
+		}
+		.con-title-pic{
+			width:2.26rem;
+			height: 1.5rem;
+			float: left;
+		}
+		.con-title-pic img{
+			width: 100%;
+			height: 100%;
+		}
+		.con-buttom{
+			width: 100%;
+			height: 0.5rem;
+			float: left;
+			margin-top: 0.15rem;
+			margin-bottom: 0.2rem;
+			line-height: 0.4rem;
+		}
+		.con-buttom .hot{
+			display: block;
+			font-size: 0.26rem;
+			color:#E36860;
+			float: left;
+		}
+		.title-fl{
+			font-size: 0.2rem;
+			display: block;
+			margin-left: 0.2rem;
+			color:#999999;
+			float: left;
+		}
+		.title-pl{
+			font-size: 0.2rem;
+			display: block;
+			margin-left: 0.2rem;
+			color:#999999;
+			float: left;
+		}
+		.title-time{
+			font-size: 0.2rem;
+			display: block;
+			margin-left: 0.2rem;
+			color:#999999;
+			float: left;
+		}
+		.title-del{
+			font-size: 0.25rem;
+			display: block;
+			margin-left: 2.5rem;
+			color:#999999;
+			float: left;
+		}
+	</style>
+	<body>
+		<header>
+			<nav>推荐</nav>
+			<nav>热点</nav>
+			<nav>视频</nav>
+			<nav>太原</nav>
+			<nav>社会</nav>
+		</header>
+		<div class="search">
+			<div class="search-input">
+				<span class="sear"></span><input type="text" placeholder="搜索"/>
+			</div>
+		</div>
+		<div class="con">
+			<ul>
+				<li>
+					<div class="con-box">
+						<div class="con-title">
+						<a href="#">
+							奥运女足奥运女足奥运女足奥运女足奥运女足奥运女足
+						</a>
+					</div>
+					<div class="con-title-pic">
+						<a href="#"><img src="img/yd11.png" alt="" /></a>
+					</div>
+					<div class="con-buttom">
+						<span class="hot">
+						</span>
+						<span class='title-fl'>分类分类</span>
+						<span class='title-pl'>1024条评论</span>
+						<span class='title-time'>三小时以前</span>
+						<span class='title-del del'></span>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="con-box">
+						<div class="con-title">
+						<a href="#">
+							奥运女足奥运女足奥运女足奥运女足奥运女足奥运女足
+						</a>
+					</div>
+					<div class="con-title-pic">
+						<a href="#"><img src="img/yd11.png" alt="" /></a>
+					</div>
+					<div class="con-buttom">
+						<span class="hot">
+						</span>
+						<span class='title-fl'>分类分类</span>
+						<span class='title-pl'>1024条评论</span>
+						<span class='title-time'>三小时以前</span>
+						<span class='title-del del'></span>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="con-box">
+						<div class="con-title">
+						<a href="#">
+							奥运女足奥运女足奥运女足奥运女足奥运女足奥运女足
+						</a>
+					</div>
+					<div class="con-title-pic">
+						<a href="#"><img src="img/yd11.png" alt="" /></a>
+					</div>
+					<div class="con-buttom">
+						<span class="hot">
+						</span>
+						<span class='title-fl'>分类分类</span>
+						<span class='title-pl'>1024条评论</span>
+						<span class='title-time'>三小时以前</span>
+						<span class='title-del del'></span>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="con-box">
+						<div class="con-title">
+						<a href="#">
+							奥运女足奥运女足奥运女足奥运女足奥运女足奥运女足
+						</a>
+					</div>
+					<div class="con-title-pic">
+						<a href="#"><img src="img/yd11.png" alt="" /></a>
+					</div>
+					<div class="con-buttom">
+						<span class="hot">
+						</span>
+						<span class='title-fl'>分类分类</span>
+						<span class='title-pl'>1024条评论</span>
+						<span class='title-time'>三小时以前</span>
+						<span class='title-del del'></span>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="con-box">
+						<div class="con-title">
+						<a href="#">
+							奥运女足奥运女足奥运女足奥运女足奥运女足奥运女足
+						</a>
+					</div>
+					<div class="con-title-pic">
+						<a href="#"><img src="img/yd11.png" alt="" /></a>
+					</div>
+					<div class="con-buttom">
+						<span class="hot">
+						</span>
+						<span class='title-fl'>分类分类</span>
+						<span class='title-pl'>1024条评论</span>
+						<span class='title-time'>三小时以前</span>
+						<span class='title-del del'></span>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="con-box">
+						<div class="con-title">
+						<a href="#">
+							奥运女足奥运女足奥运女足奥运女足奥运女足奥运女足
+						</a>
+					</div>
+					<div class="con-title-pic">
+						<a href="#"><img src="img/yd11.png" alt="" /></a>
+					</div>
+					<div class="con-buttom">
+						<span class="hot">
+						</span>
+						<span class='title-fl'>分类分类</span>
+						<span class='title-pl'>1024条评论</span>
+						<span class='title-time'>三小时以前</span>
+						<span class='title-del del'></span>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="con-box">
+						<div class="con-title">
+						<a href="#">
+							奥运女足奥运女足奥运女足奥运女足奥运女足奥运女足
+						</a>
+					</div>
+					<div class="con-title-pic">
+						<a href="#"><img src="img/yd11.png" alt="" /></a>
+					</div>
+					<div class="con-buttom">
+						<span class="hot">
+						</span>
+						<span class='title-fl'>分类分类</span>
+						<span class='title-pl'>1024条评论</span>
+						<span class='title-time'>三小时以前</span>
+						<span class='title-del del'></span>
+					</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
