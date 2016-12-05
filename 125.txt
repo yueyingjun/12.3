@@ -1,1 +1,3 @@
-https://fangtongtong.github.io/xinwenapp/
+https://fangtongtong.github.io/xinwenapp/index.html
+https://fangtongtong.github.io/xinwenapp/list.html
+https://fangtongtong.github.io/xinwenapp/xiangqing.html
